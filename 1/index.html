@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="nav"></div>
+    <div id="app"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/history@5/umd/history.production.min.js" crossorigin></script>
+
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        const headerStyle = {
+            backgroundColor: "black",
+            textAlign: "center",
+            color: "white",
+            padding: "10px"
+        }
+        const buttonStyle = {
+            backgroundColor: "blue",
+            color: "white",
+            margin: "10px"
+        }
+        const navStyle = {
+            textAlign: "center",
+            backgroundColor: "red",
+            padding: "10px"
+        }
+        const bodyStyle = {
+            textAlign: "center",
+            backgroundColor: "yellow",
+            color:"red",
+            padding: "30px"
+        }
+
+        ReactDOM.render(
+            <header style={headerStyle}>
+                <h1>Всякая всячина</h1>
+            </header>,
+            document.getElementById("header")
+        )
+
+        ReactDOM.render(
+            <nav style={navStyle}>
+                <button style={buttonStyle}>
+                    Подобие кнопки
+                </button>
+            </nav>,
+            document.getElementById("nav")
+        );
+
+        ReactDOM.render(
+            <h2 style={bodyStyle}>Какая то инфа</h2>,
+            document.getElementById("app")
+        );
+    </script>
+</body>
+
+</html>
